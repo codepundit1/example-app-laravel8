@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\BladePracticeController;
+use App\Http\Controllers\UserForm;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,7 @@ use App\Http\Controllers\BladePracticeController;
 |
 */
 // redirect
-Route::get('/', function () {
+Route::get('/welcome', function () {
     // return redirect('contact');
     return view('welcome');
 });
@@ -61,7 +62,38 @@ Route::view('/user3', 'user3');
 
 Route::get('/BladePractice', [BladePracticeController::class,'bladeTest']);
 
-
+// include view to view/php in js/ csrf/   blade:2
 Route::get('/index', function(){
     return view('index');
 });
+
+
+
+// form data submit
+
+Route::post('/form', [UserForm::class, 'getData']);
+Route::view('login', 'form');
+Route::get('/', function(){
+    return view('homepage');
+});
+Route::view('second', 'secondpage');
+Route::view('third', 'thirdpage');
+Route::view('noaccess', 'noaccess');
+
+
+//Group middle ware home page == gmwh
+
+
+// Route::view('home', 'home');
+
+// Route::view('/no', 'no');
+
+// Route::group(['middleware' => ['protectedPage']], function(){
+//     Route::view('/grpM2', 'grpM2');
+//     Route::view('/grpM3', 'grpM3');
+// });
+
+
+
+// Route middleware
+// Route::view('something', 'something')->middleware('middleware name');
