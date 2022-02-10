@@ -32,4 +32,12 @@ class UserController extends Controller
         $req->session()->flash('user', $data);
         return redirect('add');
     }
+
+    function fileUpload(Request $req)
+    {
+        $validated = $req->validate([
+           'file' => 'required',
+        ]);
+        return $req->file('file')->store('docs');
+    }
 }

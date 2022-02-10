@@ -51,6 +51,8 @@ Route::post('memberlist', [UserController::class, 'addMember']);
                            //file upload
 
 
+Route::view('upload', 'FileUpload.upload');
+Route::post('upload', [UserController::class, 'fileUpload']);
 
 
 
@@ -78,39 +80,42 @@ Route::post('memberlist', [UserController::class, 'addMember']);
 
 
 
+                                    // redirect
 
-// redirect
 // Route::get('/welcome', function () {
 //     // return redirect('contact');
 //     return view('welcome');
 // });
 
-// // pass data with routing
+                        // // pass data with routing
+
 // Route::get('/about/{name}', function($name){
 //     return view('about', ['name' => $name]);
 // });
 
-// //small route
+                                 // //small route
+
 // Route::view('/contact', 'contact');
 // Route::view('/services', 'services');
 
 
-// //pass data from route
+                            // //pass data from route
+
 // Route::get('/users/{id}', [Users::class, 'index']);
 
 
-// //laravel7 route
-// // Route::get('users',"Users@index");
+                            // //laravel7 route
+                            // // Route::get('users',"Users@index");
 
 
-// //view
-// // Route::get('/user_para/{name}/{id}',[Users::class, 'multiPara'] );
+                            // //view
+                            // // Route::get('/user_para/{name}/{id}',[Users::class, 'multiPara'] );
 // Route::get('/user_para/{name}/{id}', function($name, $id){
 //     return view('user_para', ['name'=>$name, 'id'=>$id]);
 // });
 
 
-// //component
+                                // //component
 
 // Route::get('/user1', function(){
 
@@ -123,18 +128,18 @@ Route::post('memberlist', [UserController::class, 'addMember']);
 
 // Route::view('/user3', 'user3');
 
-// //blade
+                                    // //blade
 
 // Route::get('/BladePractice', [BladePracticeController::class,'bladeTest']);
 
-// // include view to view/php in js/ csrf/   blade:2
+                            // // include view to view/php in js/ csrf/   blade:2
 // Route::get('/index', function(){
 //     return view('index');
 // });
 
 
 
-// // form data submit
+                                    // // form data submit
 
 // Route::post('/form', [UserForm::class, 'getData']);
 // Route::view('login', 'form');
@@ -144,7 +149,7 @@ Route::post('memberlist', [UserController::class, 'addMember']);
 // Route::view('noaccess', 'noaccess');
 
 
-//Group middle ware home page == gmwh
+                        //Group middle ware home page == gmwh
 
 
 // Route::view('home', 'home');
