@@ -6,6 +6,8 @@ use App\Http\Controllers\BladePracticeController;
 use App\Http\Controllers\UserForm;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TeacherController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,7 +75,9 @@ Route::view('customer', 'LanguageChange.customer');
 // });
 
 
+// fetch data from data base
 
+Route::get('list', [TeacherController::class, 'index']);
 
 
 

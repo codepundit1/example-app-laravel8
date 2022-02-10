@@ -43,4 +43,6 @@ class UserController extends Controller
         return $req->file('file')->store('docs');
 
     }
+
+    //
 }
