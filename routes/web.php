@@ -16,10 +16,9 @@ use App\Http\Controllers\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+                                         //session//
 Route::get('homepage', [UserController::class, 'Api']);
-
-// Route::view('login', 'user');
-
 Route::post('users', [UserController::class, 'userLogin']);
 Route::view('profile', 'profile');
 
@@ -42,9 +41,14 @@ Route::get('/logout', function(){
 });
 
 
+                                        //flash session
 
 
+Route::view('add', 'FlashSession.add');
 
+Route::post('memberlist', [UserController::class, 'addMember']);
+
+                           //file upload
 
 
 

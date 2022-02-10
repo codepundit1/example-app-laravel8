@@ -24,4 +24,12 @@ class UserController extends Controller
         $req->session()->put('name', $data['name']);
         return redirect('profile');
     }
+
+
+    function addMember(Request $req)
+    {
+        $data = $req->input('user');
+        $req->session()->flash('user', $data);
+        return redirect('add');
+    }
 }
