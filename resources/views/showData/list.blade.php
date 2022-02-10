@@ -3,7 +3,7 @@
 
 @include('templates.navbar')
 <div class="container">
-    <table class="table">
+    <table class="table table-striped table-hover">
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -22,5 +22,15 @@
           </tbody>
         @endforeach
       </table>
+      <span>
+        {{$teacher_list -> links()}}
+    </span>
 </div>
+
+<style>
+    .w-5{
+        display: none;
+    }
+</style>
+
 @include('templates.footer')

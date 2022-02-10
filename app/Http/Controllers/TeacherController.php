@@ -16,7 +16,8 @@ class TeacherController extends Controller
     {
         //fetch data from database
 
-        $data = Teacher::all();
+        // $data = Teacher::all();>>>>>>>>>>>>>>>>>to see all data
+        $data = Teacher::paginate(5); //>>>>>>>>>to see limit data
         return view('showData.list', ['teacher_list'  => $data]);
     }
 
