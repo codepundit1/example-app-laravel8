@@ -14,6 +14,7 @@ class UserController extends Controller
         return view('homepage', ['UserList'=> $UserList['data']]);
     }
 
+    //only session
     function userLogin(Request $req){
         $validated = $req->validate([
             'name' => 'required | max:15',
@@ -25,7 +26,7 @@ class UserController extends Controller
         return redirect('profile');
     }
 
-
+    //add member using flash session
     function addMember(Request $req)
     {
         $data = $req->input('user');
@@ -33,11 +34,13 @@ class UserController extends Controller
         return redirect('add');
     }
 
+    //file upload
     function fileUpload(Request $req)
     {
         $validated = $req->validate([
            'file' => 'required',
         ]);
         return $req->file('file')->store('docs');
+
     }
 }

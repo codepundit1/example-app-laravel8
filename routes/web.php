@@ -55,9 +55,22 @@ Route::view('upload', 'FileUpload.upload');
 Route::post('upload', [UserController::class, 'fileUpload']);
 
 
+                                //Language change / Localization
 
 
+// default change from config>app.php search locale
 
+Route::view('customer', 'LanguageChange.customer');
+
+
+                            //and dynamically like this
+
+// Route::get('/customer/{la}', function($la)
+// {
+//     App::setLocale($la);
+//     return view('LanguageChange.customer');
+
+// });
 
 
 
