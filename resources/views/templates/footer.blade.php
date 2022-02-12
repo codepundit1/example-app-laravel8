@@ -1,5 +1,5 @@
 
-    <footer class="footer">
+    <footer class="footer fixed-bottom">
         <div class="card bg-danger text-white mt-5">
             <div class="card-header text-center">
               All right reserved

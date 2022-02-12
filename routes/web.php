@@ -7,6 +7,7 @@ use App\Http\Controllers\UserForm;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,15 +76,23 @@ Route::view('customer', 'LanguageChange.customer');
 // });
 
 
-// fetch data from data base
+                       // fetch data from data base
 
 Route::get('list', [TeacherController::class, 'index']);
 
 
+// Save data in database employee
+
+Route::view('employee', 'employee');
+Route::post('employees', [EmployeeController::class,'addEmployee']);
 
 
+// delete from database
+Route::get('employeeData', [EmployeeController::class, 'index']);
+Route::get('delete/{id}', [EmployeeController::class, 'delete']);
 
 
+// Route::get('edit/{id}', [EmployeeController::class, 'showData']);
 
 
 

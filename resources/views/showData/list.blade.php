@@ -29,7 +29,8 @@
 
 <style>
     .w-5{
-        display: none;
+        width: 10px;
+        height: 10px;
     }
 </style>
 
