@@ -19,7 +19,7 @@
               <td>{{$list['username']}}</td>
               <td>{{$list['email']}}</td>
               <td>
-                  <a href="/employee" class="btn btn-success btn-sm"> Add</a> 
+
                   <a href="{{"edit/".$list['id']}}" class="btn btn-secondary btn-sm"> Edit</a>
                   <a href="{{"delete/".$list['id']}}" class="btn btn-danger btn-sm">Delete</a>
               </td>

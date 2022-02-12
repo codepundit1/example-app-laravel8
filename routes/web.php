@@ -91,8 +91,11 @@ Route::post('employees', [EmployeeController::class,'addEmployee']);
 Route::get('employeeData', [EmployeeController::class, 'index']);
 Route::get('delete/{id}', [EmployeeController::class, 'delete']);
 
+//show and update
+Route::get('edit/{id}', [EmployeeController::class, 'showData']);
+Route::post('edit', [EmployeeController::class, 'update']);
 
-// Route::get('edit/{id}', [EmployeeController::class, 'showData']);
+
 
 
 

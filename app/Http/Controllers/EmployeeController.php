@@ -32,8 +32,27 @@ class EmployeeController extends Controller
         $data = Employee::find($id);
         $data -> delete();
         return redirect('employeeData');
-       
+
     }
 
+    //show data for update
+
+    public function showData($id)
+    {
+        $data = Employee::find($id);
+        return view('edit', ['data'=>$data]);
+    }
+
+    public function update(Request $req)
+    {
+        $data = Employee::find($req->id);
+        $data->username=$req->username;
+        $data->email=$req->email;
+        $data->password=$req->password;
+        $data->save();
+
+        return redirect('employeeData');
+
+    }
 
 }
