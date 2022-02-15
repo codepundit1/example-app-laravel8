@@ -23,6 +23,7 @@ use App\Http\Controllers\MemberController;
 
 //aCCESSOR
 Route::get('member', [MemberController::class, 'index']);
+Route::get('cow', [MemberController::class, 'cow']);
 
 
 
