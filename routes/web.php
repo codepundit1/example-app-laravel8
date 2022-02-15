@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,24 @@ use App\Http\Controllers\EmployeeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//aCCESSOR
+Route::get('member', [MemberController::class, 'index']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                          //session//
 Route::get('homepage', [UserController::class, 'Api']);
