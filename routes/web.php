@@ -16,6 +16,9 @@ use App\Http\Controllers\DeviceController;
 
 use Illuminate\Support\Str;
 
+//import main
+use App\Mail\SampleMail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,7 +40,12 @@ Route::get('route/{key:device_name}', [DeviceController::class, 'index']);
 
 
 
+//markdown mail template
+// php artisan make:mail SampleMail --markdown=emails.SampleMail
 
+Route::get('/', function(){
+    return new SampleMail();
+});
 
 
 
