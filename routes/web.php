@@ -12,6 +12,7 @@ use App\Http\Controllers\MemberController;
 //relation
 use App\Http\Controllers\RelationController;
 use App\Http\Controllers\ManyController;
+use App\Http\Controllers\DeviceController;
 
 use Illuminate\Support\Str;
 
@@ -27,23 +28,39 @@ use Illuminate\Support\Str;
 */
 
 
-// Fluent
-    $data = 'hi, I am jahid hasan shiplo';
-
-    $data = Str::of($data)
-        ->ucfirst($data)
-        ->replace('Hi', 'Hello', $data)
-        ->camel($data);
 
 
 
-    //     $data = Str::ucfirst($data);
-    // $data = Str::replace('Hi', 'Hello', $data);
-    // $data = Str::camel($data);
+//Route Model Binding
 
-    echo $data;
+Route::get('route/{key:device_name}', [DeviceController::class, 'index']);
 
-//end fluent
+
+
+
+
+
+
+
+
+
+                                                           // Fluent
+    // $data = 'hi, I am jahid hasan shiplo';
+
+    // $data = Str::of($data)
+    //     ->ucfirst($data)
+    //     ->replace('Hi', 'Hello', $data)
+    //     ->camel($data);
+
+
+
+    // //     $data = Str::ucfirst($data);
+    // // $data = Str::replace('Hi', 'Hello', $data);
+    // // $data = Str::camel($data);
+
+    // echo $data;
+
+                                                  //end fluent
 
 
 
