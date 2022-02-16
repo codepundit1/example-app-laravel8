@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\dummyAPI;
+use App\Http\Controllers\CircleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//simple API
+Route::get('loadapi', [dummyAPI::class, 'index']);
+
+// Get Api
+
+Route::get('circle', [CircleController::class, 'index']);
