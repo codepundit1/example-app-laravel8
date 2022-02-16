@@ -25,4 +25,4 @@ Route::get('loadapi', [dummyAPI::class, 'index']);
 
 // Get Api
 
-Route::get('circle', [CircleController::class, 'index']);
+Route::post('circle', [CircleController::class, 'index']);
