@@ -9,6 +9,11 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\MemberController;
+//relation
+use App\Http\Controllers\RelationController;
+use App\Http\Controllers\ManyController;
+
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +26,37 @@ use App\Http\Controllers\MemberController;
 |
 */
 
+
+// Fluent
+    $data = 'hi, I am jahid hasan shiplo';
+
+    $data = Str::of($data)
+        ->ucfirst($data)
+        ->replace('Hi', 'Hello', $data)
+        ->camel($data);
+
+
+
+    //     $data = Str::ucfirst($data);
+    // $data = Str::replace('Hi', 'Hello', $data);
+    // $data = Str::camel($data);
+
+    echo $data;
+
+//end fluent
+
+
+
 //aCCESSOR
 Route::get('member', [MemberController::class, 'index']);
 Route::get('cow', [MemberController::class, 'cow']);
 
+// Relation
+//one to one
+Route::get('relation', [RelationController::class, 'index']);
+
+//one to many
+Route::get('manyrelation', [ManyController::class,'index']);
 
 
 
