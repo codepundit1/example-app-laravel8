@@ -61,4 +61,24 @@ class CircleController extends Controller
         }
 
     }
+
+
+
+    // delete api
+
+    public function delete($id)
+    {
+        $circle = Circle::find($id);
+        $result = $circle->delete();
+
+        if($result)
+        {
+              return ["Result" => "Successfully deleted"];
+        }
+        else
+        {
+            return ["Result" => "Deleted Failed"];
+        }
+
+    }
 }

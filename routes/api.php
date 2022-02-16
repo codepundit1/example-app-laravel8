@@ -31,3 +31,6 @@ Route::post('circle', [CircleController::class, 'index']);
 // Put/Update API
 
 Route::put('updateapi', [CircleController::class, 'update']);
+
+//Delete api
+Route::delete('deleteapi/{id}', [CircleController::class, 'delete']);
