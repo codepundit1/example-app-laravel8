@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dummyAPI;
 use App\Http\Controllers\CircleController;
+use App\Http\Controllers\UpdateApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,7 @@ Route::get('loadapi', [dummyAPI::class, 'index']);
 // Get Api
 
 Route::post('circle', [CircleController::class, 'index']);
+
+// Put/Update API
+
+Route::put('updateapi', [CircleController::class, 'update']);

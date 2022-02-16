@@ -17,7 +17,7 @@ class CircleController extends Controller
 
 
 
-    // for post api
+                                     // for post api
     public function index(Request $req)
     {
         $circle = new Circle();
@@ -35,6 +35,29 @@ class CircleController extends Controller
         {
             return ["Result" => "Failed"];
 
+        }
+
+    }
+
+
+
+    // For update api
+    public function update(Request $req)
+    {
+
+        $circle = Circle::find($req->id);
+        $circle->uname = $req->uname;
+        $circle->fname = $req->fname;
+        $circle->lname = $req->lname;
+        $result = $circle->save();
+
+        if($result)
+        {
+              return ["Result" => "Successfully update"];
+        }
+        else
+        {
+            return ["Result" => "Update Failed"];
         }
 
     }
