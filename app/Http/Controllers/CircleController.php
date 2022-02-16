@@ -81,4 +81,12 @@ class CircleController extends Controller
         }
 
     }
+
+    //Search api
+
+    public function search($uname)
+    {
+        return Circle::where("uname", $uname)->get();
+
+    }
 }

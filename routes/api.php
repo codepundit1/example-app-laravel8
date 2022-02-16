@@ -34,3 +34,7 @@ Route::put('updateapi', [CircleController::class, 'update']);
 
 //Delete api
 Route::delete('deleteapi/{id}', [CircleController::class, 'delete']);
+
+//Search api
+
+Route::get('search/{uname}',[CircleController::class, 'search']);
